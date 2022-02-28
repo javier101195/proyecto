@@ -1,0 +1,15 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class maestro extends Model
+{
+    use HasFactory;
+    protected $table = "maestros";
+    public function materia(){
+        return $this->hasMany(materia::class,'id');
+    }
+}
